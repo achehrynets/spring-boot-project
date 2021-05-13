@@ -10,9 +10,11 @@
     </parent>
 
     <name>application</name>
-    <packaging>jar</packaging>
-    <artifactId>application</artifactId>
     <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+
+    <artifactId>application</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,7 +25,22 @@
         <dependency>
             <groupId>std.simple.project</groupId>
             <artifactId>rest</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>std.simple.project</groupId>
+            <artifactId>service</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>std.simple.project</groupId>
+            <artifactId>repository</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>std.simple.project</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.parent.version}</version>
         </dependency>
         <!-- project dependencies -->
 
@@ -32,13 +49,6 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
         </dependency>
 
-        <!-- test dependencies -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!-- test dependencies -->
     </dependencies>
 
     <build>
